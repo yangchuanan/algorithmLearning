@@ -1,5 +1,7 @@
 package sort.problem;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
@@ -12,6 +14,13 @@ import java.util.PriorityQueue;
  * @Version 0.0.1
  */
 public class KthElement {
+
+    @Test
+    public void test(){
+        int[] array=new int[]{3,2,1,5,6,4};
+        System.out.println(findKthLargest(array,2));
+        System.out.println(findKthLargestHeap(array,2));
+    }
 
     /**
      * 排序 ：时间复杂度 O(NlogN)，空间复杂度 O(1)
@@ -37,6 +46,4 @@ public class KthElement {
         // 返回堆顶元素
         return pq.peek();
     }
-
-
 }
